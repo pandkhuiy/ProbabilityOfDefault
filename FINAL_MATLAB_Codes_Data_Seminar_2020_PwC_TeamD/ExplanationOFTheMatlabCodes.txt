@@ -1,0 +1,40 @@
+README file
+
+There are 2 files of MATLAB codes:
+- one with the use of Information Value for selecting a subset of the 15 features
+- one with the use of forward selection for selecting a subset of the 20 features
+
+The file with Information Value contains the functions called EasyChangeMW  and EasyChange2018.
+The file with forward selection contains the functions called EasyChangeMWforward and EasyChangeMWforward2018.
+
+These functions are the main function that call all the base learners and the ensemble methods 
+ for either with Information Value approach or with the forward selection approach.
+
+This is how to get all the time series results:
+
+Run the EasyChangeMW function for each pair of quarter: In this case the only thing to change in this code is the year 2001 to 2002
+and 2000 to 2001. This can easily be done with Ctrl + h (click on replace all) where all values with 2001 are replaced by 2002 
+all the values with 2000 by 2001.  Then run this easyChange function for this pair of qaurters.
+Repeat this procedure untile you are at 2017 and 2018.
+
+The EasyChangeMW2018 function only needs to be run once.
+
+This procedure is similar to the main functions EasyChangeMWforward and EasyChangeMWforward2018.
+
+We did this using 19 computers in the computer room of Mandeville building of the Erasmus University Rotterdam
+ in order to reduce the waiting time. 
+
+This whole process (running all the computer parallel took us not longer than two to three hours.)
+
+After we ran all the codes at the 19 computers we collected all the results in a separate usb stick and aggregated them
+to single MATLAB data files:
+
+
+Results_BaseLearners_And_Ensembles_NoAdaSyn_MW
+Results_BaseLearners_And_Ensembles_WithAdaSyn_MW
+results_BaseLeaners_Ensembles_ForwardSelection_MW_NoAdasyn
+results_BaseLeaners_Ensembles_ForwardSelection_MW_NoAdasyn
+
+These file were used to compute the time series results the with computeAverageResults... function given the two files.
+
+That's it.
